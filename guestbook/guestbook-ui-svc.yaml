@@ -28,6 +28,6 @@ spec:
         path: /guestbook
         backend:
           service:
-           name: spring-petclinic
+           name: guestbook-ui
            port:
             number: 80
