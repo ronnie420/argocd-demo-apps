@@ -9,9 +9,9 @@ spec:
   selector:
     app: guestbook-ui
 
-
 --- 
-apiVersion: networking.k8s.io/v1
+#apiVersion: networking.k8s.io/v1
+apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
   name: guestbook-ui-ingress
@@ -21,7 +21,7 @@ metadata:
     ingress.kubernetes.io/rewrite-target: /
 spec:
   rules:
-  - host: k8slocal.com
+  - host: localhost
     http:
       paths:
       - backend:
